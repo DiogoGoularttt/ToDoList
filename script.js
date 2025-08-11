@@ -1,6 +1,6 @@
 class Task {
   constructor(id, title, level, msg, done = false) {
-    this.id = id; 
+    this.id = id;
     this.title = title;
     this.level = level;
     this.msg = msg;
@@ -92,7 +92,8 @@ function checkedTask(taskId) {
     item.classList.add("clicado");
     icone.classList.remove("fa-regular", "fa-circle");
     icone.classList.add("fa-solid", "fa-circle-check");
-    item.appendChild(task);
+    // Mover o item no DOM para o final do pai
+    item.parentNode.appendChild(item);
   }
 
   localStorage.setItem("tasks", JSON.stringify(tasks));
