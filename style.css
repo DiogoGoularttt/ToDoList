@@ -1,0 +1,150 @@
+html,
+body {
+  box-sizing: border-box;
+  font-family: "Roboto";
+  margin: 0;
+  background-color: #101010;
+}
+
+h1 {
+  font-weight: 900;
+  color: #a1a1a1;
+}
+
+.form {
+  width: 100%;
+  background-color: #1c1c1c;
+  max-width: 400px;
+  padding: 40px;
+  border-radius: 20px;
+  margin: 0 auto 50px auto;
+}
+
+.form label {
+  color: #fff;
+}
+
+.form input,
+.form select,
+.form textarea {
+  background-color: #101010;
+  color: #a1a1a1;
+  border: none;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  background-color: #101010;
+  color: #a1a1a1;
+  border: none;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #a1a1a1;
+}
+
+#tasksList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  list-style: none;
+  align-items: stretch;
+  justify-items: center;
+  box-sizing: border-box;
+}
+
+.tarefa {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+  box-sizing: border-box;
+}
+
+.tarefa.clicado {
+  background-color: #d4f6d9;
+}
+
+.tarefa.clicado h2 {
+  text-decoration: line-through;
+  color: gray;
+}
+.tarefa.clicado .description {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.tarefa.clicado .text-difficulty {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.fa-regular.fa-circle {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.fa-solid.fa-circle-check {
+  font-size: 2rem;
+  color: green;
+  cursor: pointer;
+}
+
+.tarefa h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0 0 12px;
+}
+
+.description {
+  background: rgba(183, 183, 183, 0.622);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 0 12px;
+  flex: 1;
+  height: 139px;
+  max-height: 140px;
+  overflow: auto;
+  word-break: break-word;
+}
+
+.text-difficulty {
+  background: none;
+  padding: 10px 0 0 0;
+  font-size: smaller;
+  margin-top: auto;
+}
+
+.text-difficulty span {
+  font-weight: bold;
+}
+
+.fa-solid.fa-trash {
+  padding: 10px;
+}
+
+.fa-solid.fa-trash:hover {
+  color: red;
+  cursor: pointer;
+  background-color: #cccbcb65;
+  border-radius: 100%;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  #tasksList {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 15px;
+  }
+  .tarefa {
+    min-height: 200px;
+  }
+}
